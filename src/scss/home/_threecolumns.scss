@@ -1,0 +1,28 @@
+#home-three-columns {
+    background: $color3;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+    .column {
+        width: 20%;
+        text-align: center;
+        color: $color5;
+        h1 {
+            font-size: 5.625rem;
+            font-weight: 300;
+            margin: 50px 0;
+            color: $color2;
+        }
+        h3 {
+            text-transform: uppercase;
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+        }
+    }
+}

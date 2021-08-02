@@ -3,7 +3,7 @@ $margin-top: 40px; //1 variable to set the layout properly
 #home-header {
     width: 85vw;
     margin: $margin-top auto;
-    height: calc(100vh - 2 * $margin-top);
+    height: calc(100vh - 80px); //$margin-top variable
     position: relative;
     display: flex;
     flex-direction: column;

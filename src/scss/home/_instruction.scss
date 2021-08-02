@@ -1,0 +1,55 @@
+#home-instruction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color5;
+    h1 {
+        margin: 50px auto 40px;
+        font-weight: 400;
+    }
+    > img {
+        margin-bottom: 40px;
+    }
+    .steps {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 70px 20vw;
+        background-color: $color1;
+        .column {
+            text-align: center;
+            width: 10vw;
+            h3 {
+                font-size: 1.125rem;
+                font-weight: 400;
+                &::after {
+                    content: "";
+                    display: block;
+                    border: 1px solid #707070;
+                    width: 70px;
+                    margin: 10px auto;
+                }
+            }
+            p {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+    }
+    a {
+        text-transform: uppercase;
+        text-align: center;
+        display: inline-block;
+        padding: 20px 0;
+        margin: 30px auto 60px;
+        font-size: 2.25rem;
+        color: $color5;
+        border: 1px solid $color5;
+        font-weight: 300;
+        width: 250px;
+        &:hover {
+            border-color: $color3;
+            color: $color3;
+        }
+    }
+}

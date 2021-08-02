@@ -10,7 +10,7 @@ const HomeHeaderMain = () => {
             <img src={decoration} alt='decoration'/>
             <div className="header-links">
                 <Link to="/login">Give<br/> away</Link>
-                <Link to="/login">Organize<br/> event</Link>
+                <Link to="/login">Organize<br/> donation</Link>
             </div>
             <img src={headerImage} alt='decoration'/>
         </main>

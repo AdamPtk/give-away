@@ -8,13 +8,14 @@ const HomeHeaderNav = () => {
                 to="home-header"
                 spy={true}
                 smooth={true}
+                offset={-100}
                 duration={500}
             >Start</Link>
             <Link 
                 activeClass="active"
                 to="home-instruction"
                 spy={true}
-                smooth={true}
+                smooth="easeInQuint"
                 duration={500}
             >What is it about?</Link>
             <Link 
