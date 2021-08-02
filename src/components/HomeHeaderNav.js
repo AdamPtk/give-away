@@ -2,7 +2,7 @@ import { Link } from 'react-scroll';
 
 const HomeHeaderNav = () => {
     return (
-        <nav className="nav">
+        <nav className="nav-home">
             <Link 
                 activeClass="active"
                 to="home-header"

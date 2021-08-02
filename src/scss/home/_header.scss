@@ -1,0 +1,76 @@
+$margin-top: 40px; //1 variable to set the layout properly
+
+#home-header {
+    width: 85vw;
+    margin: $margin-top auto;
+    height: calc(100vh - 2 * $margin-top);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    .nav-log {
+        margin-bottom: 40px;
+        a {
+            padding: 10px;
+            font-size: 0.8125rem;
+            color: $color4;
+            &:last-child {
+                border: 1px solid $color3;
+            }
+            &:hover {
+                color: $color3;
+            }
+        }
+    }
+    .nav-home {
+        a {
+            padding: 10px 20px;
+            font-size: 1.125rem;
+            color: $color5;
+            font-weight: 400;
+        }
+        .active {
+            border: 1px solid $color3;
+        }
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        &:last-child {
+            position: absolute;
+            top: -$margin-top;
+            left: -600px;
+            height: 100vh;
+            z-index: -9999;
+        }
+    }
+    main {
+        text-align: center;
+        margin-top: 150px;
+        margin-right: 100px;
+        h1 {
+            font-size: 2.375rem;
+            font-weight: 400;
+        }
+        .header-links {
+            margin-top: 65px;
+            display: flex;
+            justify-content: space-around;
+        }
+        a {
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 20px 0;
+            font-size: 2.25rem;
+            color: $color5;
+            border: 1px solid $color5;
+            font-weight: 300;
+            width: 250px;
+            &:hover {
+                border-color: $color3;
+                color: $color3;
+            }
+        }
+    }
+}
