@@ -1,8 +1,6 @@
-$margin-top: 40px; //1 variable to set the layout properly
-
 #home-header {
-    padding: $margin-top 150px;
-    height: 100vh; //$margin-top variable
+    padding: 40px 150px;
+    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -36,20 +34,9 @@ $margin-top: 40px; //1 variable to set the layout properly
             border: 1px solid $color3;
         }
     }
-    img {
-        display: block;
-        margin: 0 auto;
-        &:last-child {
-            position: absolute;
-            top: -$margin-top;
-            left: -600px;
-            height: 100vh;
-            z-index: -9999;
-        }
-    }
     main {
         text-align: center;
-        margin-top: 20vh;
+        margin-top: 17vh;
         margin-right: 5vw;
 
         h1 {
