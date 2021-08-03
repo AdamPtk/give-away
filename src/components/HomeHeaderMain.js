@@ -1,18 +1,17 @@
-import { Link } from 'react-router-dom';
-import decoration from '../assets/Decoration.svg';
 import headerImage from '../assets/Home-Hero-Image.jpg';
+
+import HeaderDecoration from './atoms/HeaderDecoration';
+import MainButton from './atoms/MainButton';
 
 const HomeHeaderMain = () => {
     return (
         <main>
-            <h1>Start helping!</h1>
-            <h1>Give your unwanted things for charity</h1>
-            <img src={decoration} alt='decoration'/>
+            <HeaderDecoration text1="Start helping!" text2="Give your unwanted things for charity" />
             <div className="header-links">
-                <Link to="/login">Give<br/> away</Link>
-                <Link to="/login">Organize<br/> donation</Link>
+                <MainButton text="Give away" />
+                <MainButton text="Organize donation" />
             </div>
-            <img src={headerImage} alt='decoration'/>
+            <img src={headerImage} alt='stuff'/>
         </main>
     );
 }

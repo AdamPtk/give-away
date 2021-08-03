@@ -1,15 +1,13 @@
-import { Link } from 'react-router-dom';
+import HeaderDecoration from './atoms/HeaderDecoration';
 import HomeInstructionSteps from './HomeInstructionSteps';
-
-import decoration from '../assets/Decoration.svg';
+import MainButton from './atoms/MainButton';
 
 const HomeInstruction = () => {
     return (
         <section id='home-instruction'>
-            <h1>Only 4 simple steps</h1>
-            <img src={decoration} alt='decoration'/>
+            <HeaderDecoration text1="Only 4 steps" />
             <HomeInstructionSteps />
-            <Link to="/login">Give<br/> away</Link>
+            <MainButton text="Give away" />
         </section>
     );
 }
