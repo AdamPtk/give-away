@@ -1,6 +1,7 @@
-import decoration from '../assets/Decoration.svg';
-import HomeInstructionSteps from './HomeInstructionSteps';
 import { Link } from 'react-router-dom';
+import HomeInstructionSteps from './HomeInstructionSteps';
+
+import decoration from '../assets/Decoration.svg';
 
 const HomeInstruction = () => {
     return (

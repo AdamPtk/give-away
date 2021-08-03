@@ -10,35 +10,45 @@ const HomeHeaderNav = () => {
                 smooth={true}
                 offset={-100}
                 duration={500}
-            >Start</Link>
+            >
+                Start
+            </Link>
             <Link 
                 activeClass="active"
                 to="home-instruction"
                 spy={true}
                 smooth="easeInQuint"
                 duration={500}
-            >What is it about?</Link>
+            >
+                What is it about?
+            </Link>
             <Link 
                 activeClass="active"
                 to="home-about"
                 spy={true}
                 smooth={true}
                 duration={500}
-            >About us</Link>
+            >
+                About us
+            </Link>
             <Link 
                 activeClass="active"
                 to="home-cooperation"
                 spy={true}
                 smooth={true}
                 duration={500}
-            >Charity and organizations</Link>
+            >
+                Charity and organizations
+            </Link>
             <Link 
                 activeClass="active"
                 to="home-contact"
                 spy={true}
                 smooth={true}
                 duration={500}
-            >Contact</Link>
+            >
+                Contact
+            </Link>
         </nav>
     );
 }
