@@ -1,5 +1,3 @@
-import headerImage from '../assets/Home-Hero-Image.jpg';
-
 import HeaderDecoration from './atoms/HeaderDecoration';
 import MainButton from './atoms/MainButton';
 
@@ -11,7 +9,6 @@ const HomeHeaderMain = () => {
                 <MainButton text="Give away" />
                 <MainButton text="Organize donation" />
             </div>
-            <img src={headerImage} alt='stuff'/>
         </main>
     );
 }
