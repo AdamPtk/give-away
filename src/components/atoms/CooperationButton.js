@@ -1,6 +1,6 @@
-const CooperationButton = ({text}) => {
+const CooperationButton = ({text, value, onClick}) => {
     return (
-        <button>{text}</button>
+        <button onClick={onClick} value={value}>{text}</button>
     );
 }
 
