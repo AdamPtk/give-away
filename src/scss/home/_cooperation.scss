@@ -15,11 +15,15 @@
     .buttons {
         margin: 60px auto;
         width: 60%;
+        height: 5rem;
         display: flex;
         justify-content: space-between;
         button {
             font-size: 1.5rem;
             width: 200px;
+            &.active {
+                border: 1px solid $color5;
+            }
         }
     }
     .content {
@@ -38,6 +42,9 @@
             padding: 30px 0;
             border-bottom: 1px solid $color5;
             font-family: $font-alt;
+            &:nth-child(3) {
+                border: none;
+            }
             h3 {
                 margin: 0;
                 font-size: 1.625rem;
@@ -47,6 +54,27 @@
                 margin: 0;
                 font-weight: 300;
             }
+        }
+        .paginationBttns {
+            width: 80%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 50px auto;
+        }
+        .paginationBttns a {
+            padding: 10px 12px;
+            margin: 10px;
+        }
+        .previousBttn {
+            display: none;
+        }
+        .nextBttn {
+            display: none;
+        }
+        a.paginationActiveLink{
+            font-weight: 700;
+            border: 1px solid $color5;
         }
     }
 }

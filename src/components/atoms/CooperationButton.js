@@ -1,6 +1,12 @@
-const CooperationButton = ({text, value, onClick}) => {
+const CooperationButton = ({text, setData, className}) => {
+    const handleClick = () => {
+        if (typeof setData === "function") {
+            setData();
+        }
+    }
+
     return (
-        <button onClick={onClick} value={value}>{text}</button>
+        <button className={className} onClick={handleClick}>{text}</button>
     );
 }
 
