@@ -3,6 +3,7 @@ import HomeThreeColumns from './HomeThreeColumns';
 import HomeInstruction from './HomeInstruction';
 import HomeAbout from './HomeAbout';
 import HomeCooperation from './HomeCooperation';
+import HomeContact from './HomeContact';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <HomeInstruction />
             <HomeAbout />
             <HomeCooperation />
+            <HomeContact />
         </>
     );
 }
