@@ -6,6 +6,7 @@ const HomeContactForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [sent, setSent] = useState(false);
 
     const validateStyle = {
         color: "red"
@@ -31,13 +32,29 @@ const HomeContactForm = () => {
 
     const handleOnSubmit = e => {
         e.preventDefault();
-        validateName(name);
-        validateEmail(email);
-        validateMessage(message);
+        const data = {
+            name: name,
+            email: email,
+            message: message
+        };
+        if (validateName(name) && validateEmail(email) && validateMessage(message)) {
+            fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            setName("");
+            setEmail("");
+            setMessage("");
+            setSent(true);
+        }
     }
     return (
         <div className="form-section">
             <HeaderDecoration text1="Contact us!" />
+            {sent ? <span className="sent">Message sent! <br></br> We will contact you soon.</span> : null}
             <form onSubmit={handleOnSubmit}>
                 <div className="user-data">
                     <label>
