@@ -1,4 +1,4 @@
-const ValidationMessage = ({el, validationFunc, style, text}) => {
+const ValidationMessageContact = ({el, validationFunc, style, text}) => {
     if (el.length === 0 || validationFunc(el)) {
         return null;
     }
@@ -7,4 +7,4 @@ const ValidationMessage = ({el, validationFunc, style, text}) => {
     }
 }
 
-export default ValidationMessage;
+export default ValidationMessageContact;

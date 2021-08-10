@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 import HeaderDecoration from "./atoms/HeaderDecoration";
-import ValidationMessage from "./atoms/ValidationMessage";
+import ValidationMessageContact from "./atoms/ValidationMessageContact";
 
 const HomeContactForm = () => {
     const [name, setName] = useState("");
@@ -69,7 +69,7 @@ const HomeContactForm = () => {
                             onChange={e => setName(e.target.value)}
                             style={name.length === 0 || validateName(name) ? null : {borderBottom: "1px solid red"}}
                         />
-                        <ValidationMessage 
+                        <ValidationMessageContact 
                             el={name}
                             validationFunc={validateName}
                             style={validateStyle}
@@ -87,7 +87,7 @@ const HomeContactForm = () => {
                             onChange={e => setEmail(e.target.value)}
                             style={email.length === 0 || validateEmail(email) ? null : {borderBottom: "1px solid red"}}
                         />
-                        <ValidationMessage 
+                        <ValidationMessageContact 
                             el={email}
                             validationFunc={validateEmail}
                             style={validateStyle}
@@ -111,7 +111,7 @@ const HomeContactForm = () => {
                         onChange={e => setMessage(e.target.value)}
                         style={message.length === 0 || validateMessage(message) ? null : {borderBottom: "1px solid red"}}
                         />
-                        <ValidationMessage 
+                        <ValidationMessageContact 
                             el={message}
                             validationFunc={validateMessage}
                             style={validateStyle}
