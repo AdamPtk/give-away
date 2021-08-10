@@ -5,9 +5,8 @@ const HomeHeaderNav = () => {
     return (
         <nav className="nav-home">
             <NavHashLink 
-                activeClass="active"
+                activeClassName="active"
                 to="/#home-header"
-                spy={true}
                 smooth={true}
                 offset={-100}
                 duration={500}
