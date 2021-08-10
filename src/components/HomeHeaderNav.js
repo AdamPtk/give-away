@@ -1,18 +1,19 @@
-import { Link } from 'react-scroll'; 
+import { Link } from 'react-scroll';
+import { NavHashLink } from 'react-router-hash-link';
 
 const HomeHeaderNav = () => {
     return (
         <nav className="nav-home">
-            <Link 
+            <NavHashLink 
                 activeClass="active"
-                to="home-header"
+                to="/#home-header"
                 spy={true}
                 smooth={true}
                 offset={-100}
                 duration={500}
             >
                 Start
-            </Link>
+            </NavHashLink>
             <Link 
                 activeClass="active"
                 to="home-instruction"

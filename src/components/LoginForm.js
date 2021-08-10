@@ -6,6 +6,7 @@ const LoginForm = () => {
                 id="login" 
                 name="login" 
                 type="email"
+                autoComplete="off"
             />
             <label>Password</label>
             <input 
