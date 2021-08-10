@@ -1,0 +1,13 @@
+#logout {
+    height: 100vh;
+    @include form-flex;
+    color: $color5;
+    a {
+        font-weight: 300;
+        padding: 12px;
+        color: $color5;
+        font-weight: 1.125rem;
+        border: 1px solid $color5;
+        margin-top: 30px;
+    }
+}
