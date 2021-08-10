@@ -1,6 +1,7 @@
 import {useState} from "react";
 
 import HeaderDecoration from "./atoms/HeaderDecoration";
+import ValidationMessage from "./atoms/ValidationMessage";
 
 const HomeContactForm = () => {
     const [name, setName] = useState("");
@@ -68,7 +69,12 @@ const HomeContactForm = () => {
                             onChange={e => setName(e.target.value)}
                             style={name.length === 0 || validateName(name) ? null : {borderBottom: "1px solid red"}}
                         />
-                        {(name.length === 0 || validateName(name)) ? null : <span style={validateStyle}>The given name is incorrect</span>}
+                        <ValidationMessage 
+                            el={name}
+                            validationFunc={validateName}
+                            style={validateStyle}
+                            text={"The given name is incorrect"}
+                        />
                     </label>
                     <label>
                         Type your email
@@ -81,7 +87,12 @@ const HomeContactForm = () => {
                             onChange={e => setEmail(e.target.value)}
                             style={email.length === 0 || validateEmail(email) ? null : {borderBottom: "1px solid red"}}
                         />
-                        {(email.length === 0 || validateEmail(email)) ? null : <span style={validateStyle}>The given email is incorrect</span>}
+                        <ValidationMessage 
+                            el={email}
+                            validationFunc={validateEmail}
+                            style={validateStyle}
+                            text={"The given email is incorrect"}
+                        />
                     </label>
                 </div>
 
@@ -90,8 +101,8 @@ const HomeContactForm = () => {
                     <textarea 
                         id="message" 
                         name="message" 
-                        rows="4" 
-                        cols="40" 
+                        rows="4"
+                        cols="40"
                         placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing 
                             elit, sed do eiusmod tempor incididunt ut labore et dolore 
                             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -100,8 +111,12 @@ const HomeContactForm = () => {
                         onChange={e => setMessage(e.target.value)}
                         style={message.length === 0 || validateMessage(message) ? null : {borderBottom: "1px solid red"}}
                         />
-                        {(message.length === 0 || validateMessage(message)) ? null : <span style={validateStyle}>The message must be at least 120 characters long</span>}
-                </div>
+                        <ValidationMessage 
+                            el={message}
+                            validationFunc={validateMessage}
+                            style={validateStyle}
+                            text={"The message must be at least 120 characters long"}
+                        />                </div>
                 <input id="submit" type="submit" value="Send" />
             </form>
         </div>
