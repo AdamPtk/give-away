@@ -4,8 +4,8 @@ import LoginForm from "./LoginForm";
 const Login = () => {
     return (
         <section id="login-section">
-            <HeaderDecoration text1="Log in" />
-            <LoginForm />
+                <HeaderDecoration text1="Login" />
+                <LoginForm />
         </section>
     );
 }

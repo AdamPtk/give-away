@@ -1,8 +1,8 @@
-#login-section {
+#register-section {
     height: 100vh;
     @include form-flex;
     color: $color5;
-    .login-data {
+    .register-data {
         @include form-flex;
         width: 30vw;
         .inputs {
@@ -27,7 +27,7 @@
             display: flex;
             justify-content: space-between;
             font-size: 1.125rem;
-            a, #login-submit {
+            a, #register-submit {
                 color: $color5;
                 font-weight: 300;
                 padding: 12px;
@@ -35,7 +35,7 @@
                     cursor: pointer;
                 }
             }
-            #login-submit {
+            #register-submit {
                 border: 1px solid $color5;
             }
         }
