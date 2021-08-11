@@ -38,7 +38,7 @@ const LoginForm = () => {
         <form className="login-data">
             <div className="inputs">
                 <label htmlFor="login">Email</label>
-                <input 
+                <input
                     id="login" 
                     name="login" 
                     type="email"
