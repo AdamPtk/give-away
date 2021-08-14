@@ -8,11 +8,14 @@
     align-items: flex-end;
     .nav-log {
         margin-bottom: 40px;
+        span {
+            margin-right: 20px;
+        }
         a {
             padding: 10px;
             font-size: 0.8125rem;
             color: $color4;
-            &:last-child {
+            &.active {
                 border: 1px solid $color3;
             }
             &:hover {

@@ -1,5 +1,6 @@
 import {useState} from 'react';
-import { Link } from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
+import {useAuth} from './contexts/AuthContext';
 
 import ValidationMessageLogin from './atoms/ValidationMessageLogin';
 
@@ -8,6 +9,11 @@ const RegisterForm = () => {
     const [password, setPassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");
     const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    const history = useHistory();
+
+    const {signup} = useAuth();
 
     const validateLogin = login => {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -27,21 +33,30 @@ const RegisterForm = () => {
         return (length >= 6 && repeatPassword === password) ? true : false;
     }
 
-    const handleOnClick = e => {
+    async function handleSubmit(e) {
         e.preventDefault();
         setLogin("");
         setPassword("");
         setRepeatPassword("");
-        if (validateLogin(login) && validatePassword(password) && validateRepeatPassword(repeatPassword)) {
-            setError(false);
-            console.log("poszło");
-        } else {
+        if (!validateLogin(login) && !validatePassword(password) && !validateRepeatPassword(repeatPassword)) {
             setError(true);
             console.log("nie poszło");
+            return
         }
+        try {
+            setLoading(true);
+            await signup(login, password)
+            history.push("/")
+        }
+        catch {
+            setError(true)
+            console.log("błąd")
+        }
+        setLoading(false)
     }
+
     return (
-        <form className="register-data">
+        <form className="register-data" onSubmit={handleSubmit}>
             <div className="inputs">
                 <label htmlFor="register-login">Email</label>
                 <input 
@@ -86,7 +101,7 @@ const RegisterForm = () => {
             </div>
             <div className="buttons">
                 <Link to="/login">Login</Link>
-                <input id="register-submit" type="submit" value="Register" onClick={handleOnClick} />
+                <input disabled={loading} id="register-submit" type="submit" value="Register"/>
             </div>
         </form>
     );
