@@ -8,5 +8,4 @@ Tools & technologies:
 * HTML/CSS/Sass
 * Firebase
 
-<img src="public/GiveAway.png" alt="GiveAway" />
-![GiveAway](public/GiveAway.png)
+<img src="ublic/GiveAway.png" alt="GiveAway" />
