@@ -8,4 +8,4 @@ Tools & technologies:
 * HTML/CSS/Sass
 * Firebase
 
-![GiveAway](https://user-images.githubusercontent.com/74918235/129476431-177ea0ec-2f01-416d-a6fb-de23917b7444.png)
+![GiveAway](https://github.com/AdamPtk/give-away/blob/master/public/GiveAway.png)
