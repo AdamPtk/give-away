@@ -8,4 +8,4 @@ Tools & technologies:
 * HTML/CSS/Sass
 * Firebase
 
-<img src="ublic/GiveAway.png" alt="GiveAway" />
+<a href="https://adamptk.github.io/give-away"><img src="public/GiveAway.png" alt="GiveAway" /></a>
