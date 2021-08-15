@@ -8,4 +8,4 @@ Tools & technologies:
 * HTML/CSS/Sass
 * Firebase
 
-![GiveAway](public/GiveAway.png)
+![GiveAway](ublic/GiveAway.png)
