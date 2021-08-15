@@ -8,6 +8,6 @@ Tools & technologies:
 * HTML/CSS/Sass
 * Firebase
 
-### Check it out:
+### Check it out here:
 
 <a href="https://adamptk.github.io/give-away"><img src="public/GiveAway.png" alt="GiveAway" /></a>
