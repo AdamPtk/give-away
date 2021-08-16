@@ -1,0 +1,49 @@
+#give-away-header {
+    padding: 40px 150px;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url('../../assets/Form-Hero-Image.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -10px bottom;
+    main {
+        text-align: center;
+        margin-right: 5vw;
+        h1 {
+            line-height: 4rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        .header-steps {
+            margin-top: 65px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .square {
+                border: 1px solid $color5;
+                transform: rotate(45deg);
+                width: 120px;
+                height: 120px;
+                position: relative;
+                .box {
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    width: 102px;
+                    height: 102px;
+                    top: -5px;
+                    left: -5px;
+                }
+                p {
+                    font-size: 1.375rem;
+                    font-weight: 300;
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

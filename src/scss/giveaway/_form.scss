@@ -1,0 +1,37 @@
+#give-away-form {
+    * {
+        margin: 0;
+    }
+    .container {
+        margin: 0 auto;
+        padding: 50px 0;
+        max-width: 85vw;
+    }
+    h1 {
+        font-size: 2.25rem;
+        margin-top: 70px;
+    }
+    .important {
+        background-color: $color3;
+        p {
+            font-size: 1.375rem;
+            line-height: 2;
+        }
+    }
+    .form-area {
+        background-image: url("../../assets/Background-Form.jpg");
+        background-size: cover;
+        *:not(h1) {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    }
+    .buttons {
+        display: flex;
+        button {
+            padding: 20px 50px;
+            border: 1px solid $color5;
+            margin-right: 50px;
+        }
+    }
+}
