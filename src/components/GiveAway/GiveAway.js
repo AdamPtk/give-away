@@ -1,6 +1,6 @@
 import GiveAwayHeader from './GiveAwayHeader';
 import GiveAwayMain from './GiveAwayMain';
-import HomeContact from './HomeContact';
+import HomeContact from '../Home/HomeContact';
 
 const GiveAway = () => {
     return (

@@ -1,9 +1,9 @@
 import {useState} from "react";
 
-import organizations from "../data/organizations.json";
+import organizations from "../../data/organizations.json";
 
-import HeaderDecoration from './atoms/HeaderDecoration';
-import CooperationButton from './atoms/CooperationButton';
+import HeaderDecoration from '../atoms/HeaderDecoration';
+import CooperationButton from '../atoms/CooperationButton';
 import HomeCooperationContent from './HomeCooperationContent';
 
 const HomeCooperation = () => {

@@ -1,7 +1,7 @@
 import {useState} from "react";
 
-import HeaderDecoration from "./atoms/HeaderDecoration";
-import ValidationMessageContact from "./atoms/ValidationMessageContact";
+import HeaderDecoration from "../atoms/HeaderDecoration";
+import ValidationMessageContact from "../atoms/ValidationMessageContact";
 
 const HomeContactForm = () => {
     const [name, setName] = useState("");

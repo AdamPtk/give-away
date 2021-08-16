@@ -1,6 +1,6 @@
-import HeaderDecoration from './atoms/HeaderDecoration';
+import HeaderDecoration from '../atoms/HeaderDecoration';
+import MainButton from '../atoms/MainButton';
 import HomeInstructionSteps from './HomeInstructionSteps';
-import MainButton from './atoms/MainButton';
 
 const HomeInstruction = () => {
     return (
