@@ -4,12 +4,12 @@ import {
   Switch
 } from 'react-router-dom';
 
-import HomeNav from './components/HomeNav';
-import Home from './components/Home';
+import HomeNav from './components/Home/HomeNav';
+import Home from './components/Home/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 import Logout from './components/Logout';
-import GiveAway from './components/GiveAway';
+import GiveAway from './components/GiveAway/GiveAway';
 import NotFound from './components/NotFound';
 
 import {AuthProvider} from "./components/contexts/AuthContext";

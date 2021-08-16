@@ -1,5 +1,5 @@
-import HeaderDecoration from './atoms/HeaderDecoration';
-import Step from './atoms/Step';
+import HeaderDecoration from '../atoms/HeaderDecoration';
+import Step from '../atoms/Step';
 
 const GiveAwayHeaderMain = () => {
     return (

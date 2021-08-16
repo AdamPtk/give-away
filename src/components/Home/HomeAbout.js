@@ -1,6 +1,6 @@
-import HeaderDecoration from './atoms/HeaderDecoration';
-import About from './atoms/About';
-import ImageDiv from './atoms/ImageDiv';
+import HeaderDecoration from '../atoms/HeaderDecoration';
+import About from '../atoms/About';
+import ImageDiv from '../atoms/ImageDiv';
 
 const HomeAbout = () => {
     return (

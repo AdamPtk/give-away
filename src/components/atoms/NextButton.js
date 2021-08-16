@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import {GiveAwayContext} from "../GiveAwayMain";
+import {GiveAwayContext} from "../GiveAway/GiveAwayMain";
 
 export default function NextButton() {
     const {handleNextStep} = useContext(GiveAwayContext);

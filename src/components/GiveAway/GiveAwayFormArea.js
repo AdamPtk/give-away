@@ -1,5 +1,5 @@
-import NextButton from "./atoms/NextButton";
-import BackButton from "./atoms/BackButton";
+import NextButton from "../atoms/NextButton";
+import BackButton from "../atoms/BackButton";
 
 export default function GiveAwayFormArea({step}) {
     const headerSwitch = (step) => {

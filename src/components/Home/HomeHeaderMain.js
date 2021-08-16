@@ -1,5 +1,5 @@
-import HeaderDecoration from './atoms/HeaderDecoration';
-import MainButton from './atoms/MainButton';
+import HeaderDecoration from '../atoms/HeaderDecoration';
+import MainButton from '../atoms/MainButton';
 
 const HomeHeaderMain = () => {
     return (
