@@ -16,7 +16,7 @@ export default function GiveAwayImportant({step}) {
     return (
         <section className="important">
             <div className="container">
-                <h1>Important!</h1>
+                <h1 style={{margin: 0}}>Important!</h1>
                 <p>{messageSwitch(step)}</p>
             </div>
         </section>

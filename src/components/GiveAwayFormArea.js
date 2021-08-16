@@ -21,7 +21,9 @@ export default function GiveAwayFormArea({step}) {
         <section className="form-area">
             <div className="container">
                 <p>Step {step}/4</p>
-                <h1>{headerSwitch(step)}</h1>
+                <div className="forms">
+                    <h1>{headerSwitch(step)}</h1>
+                </div>
                 <div className="buttons">
                     {step === 1 ? null : <BackButton />}
                     <NextButton />

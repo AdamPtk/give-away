@@ -13,6 +13,7 @@
     }
     .important {
         background-color: $color3;
+        height: 20vh;
         p {
             font-size: 1.375rem;
             line-height: 2;
@@ -21,6 +22,16 @@
     .form-area {
         background-image: url("../../assets/Background-Form.jpg");
         background-size: cover;
+        height: 80vh;
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .forms {
+            flex-grow: 1;
+        }
         *:not(h1) {
             font-size: 1.5rem;
             font-weight: 300;
