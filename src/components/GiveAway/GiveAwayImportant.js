@@ -6,7 +6,10 @@ export default function GiveAwayImportant({step}) {
             case 2:
                 return "Pack all your things into 60 liter bags.";
             case 3:
-                return "If you know who you would like to help - you can search the name of organization. Otherwise you can filter organizations by location or their main charity target.";
+                return (
+                    "If you know who you would like to help - you can search the name of organization. " +
+                    "Otherwise you can filter organizations by location or their main charity target."
+                )
             case 4:
                 return "Type address and time of your package pickup:";
             default:

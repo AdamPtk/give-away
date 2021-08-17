@@ -35,7 +35,6 @@ const HomeCooperation = () => {
         getData(organizations, el);
         setActive(el);
     }
-
     
     return (
         <section id='home-cooperation'>
@@ -54,7 +53,8 @@ const HomeCooperation = () => {
                 <CooperationButton 
                     className={active === "donations" ? "active" : ""} 
                     setData={() => handleClick("donations")} 
-                    text="Local donations" />
+                    text="Local donations" 
+                />
             </div>
             <HomeCooperationContent description={description} items={items}/>
         </section>

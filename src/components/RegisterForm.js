@@ -46,13 +46,13 @@ const RegisterForm = () => {
         try {
             setLoading(true);
             await signup(login, password)
-            history.push("/")
+            history.push("/");
         }
         catch {
-            setError(true)
-            console.log("błąd")
+            setError(true);
+            console.log("błąd");
         }
-        setLoading(false)
+        setLoading(false);
     }
 
     return (
@@ -70,7 +70,7 @@ const RegisterForm = () => {
                 />
                 <ValidationMessageLogin 
                     validationEl={error}
-                    text={"The given email is incorrect"}
+                    text="The given email is incorrect"
                 />
                 <label htmlFor="register-password">Password</label>
                 <input 

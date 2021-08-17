@@ -95,7 +95,6 @@ const HomeContactForm = () => {
                         />
                     </label>
                 </div>
-
                 <div className="user-message">
                     <label htmlFor="message">Type your message</label>
                     <textarea 
@@ -110,13 +109,14 @@ const HomeContactForm = () => {
                         value={message}
                         onChange={e => setMessage(e.target.value)}
                         style={message.length === 0 || validateMessage(message) ? null : {borderBottom: "1px solid red"}}
-                        />
-                        <ValidationMessageContact 
-                            el={message}
-                            validationFunc={validateMessage}
-                            style={validateStyle}
-                            text={"The message must be at least 120 characters long"}
-                        />                </div>
+                    />
+                    <ValidationMessageContact 
+                        el={message}
+                        validationFunc={validateMessage}
+                        style={validateStyle}
+                        text={"The message must be at least 120 characters long"}
+                    />                
+                </div>
                 <input id="submit" type="submit" value="Send" />
             </form>
         </div>
