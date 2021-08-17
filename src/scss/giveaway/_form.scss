@@ -10,6 +10,7 @@
     h1 {
         font-size: 2.25rem;
         margin-top: 70px;
+        margin-bottom: 50px;
     }
     .important {
         background-color: $color3;
@@ -35,6 +36,35 @@
         *:not(h1) {
             font-size: 1.5rem;
             font-weight: 300;
+        }
+    }
+    .step1 {
+        label {
+            display: block;
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 70px;
+            cursor: pointer;
+            line-height: 40px;
+        }
+        input {
+            position: absolute;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            &:checked {
+                + span {
+                    background-color: $color3;
+                }
+            }
+        }
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $color5;
         }
     }
     .buttons {
