@@ -1,15 +1,13 @@
+import {useState} from "react";
+import Step2Select from "./Step2Select";
+
 export default function Step2() {
+    const [selected, setSelected] = useState("select");
+
     return (
-        <div>
-            <select
-                value={1}
-                onChange="">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+        <div className="step2">
+            <span>Number of 60l bags:</span>
+            <Step2Select select={selected} onSelect={setSelected}/>
         </div>
     )
 }

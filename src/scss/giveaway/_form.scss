@@ -67,6 +67,57 @@
             border: 1px solid $color5;
         }
     }
+    .step2 {
+        display: flex;
+        align-items: center;
+        span {
+            margin-right: 30px;
+        }
+        .select {
+            position: relative;
+        }
+        .select-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid $color5;
+            width: 300px;
+            padding: 10px 0;
+            padding-left: 20px;
+            user-select: none;
+            cursor: pointer;
+            img[rotate='1'] {
+                transition: all 0.5s;
+                transform: rotate(180deg);
+            }
+            span {
+                display: flex;
+                align-items: center;
+                &::before, &::after {
+                    content: "";
+                    display: inline-block;
+                    height: 1px;
+                    width: 20px;
+                    background-color: $color5;
+                    margin: 0 10px;
+                }
+            }
+        }
+        .select-content {
+            position: absolute;
+            top: 110%;
+            right: 0;
+            border: 1px solid $color5;
+            .select-item {
+                padding: 10px 30px;
+                transition: all 0.2s;
+                cursor: pointer;
+                &:hover {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
     .buttons {
         display: flex;
         button {
