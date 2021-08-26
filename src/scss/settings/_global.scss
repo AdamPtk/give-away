@@ -22,9 +22,10 @@ button {
 input, textarea {
     background-color: transparent;
     resize: none;
+    outline: none;
 }
 
 .decoration {
-    font-size: 2.375rem;
+    font-size: clamp(1.5rem, 3vw, 2.375rem);
     font-weight: 400;
 }
