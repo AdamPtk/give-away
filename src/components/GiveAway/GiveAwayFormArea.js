@@ -32,7 +32,7 @@ export default function GiveAwayFormArea({step}) {
             case 4:
                 return <Step4 />
             default:
-                return <Step1 />;
+                return <Step1 />
         }
     }
 
