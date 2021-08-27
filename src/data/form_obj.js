@@ -1,6 +1,6 @@
 const formObj = {
     category: "",
-    bags: "",
+    bags: "select",
     location: "",
     group: "",
     organization: "",
