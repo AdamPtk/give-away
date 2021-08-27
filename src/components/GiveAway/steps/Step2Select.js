@@ -4,7 +4,7 @@ import {GiveAwayContext} from "../GiveAwayMain";
 import arrow from "../../../assets/Icon-Arrow-Down.svg";
 
 
-export default function Step2Select({select, onSelect}) {
+export default function Step2Select() {
     const [isActive, setIsActive] = useState(false);
     const [rotate, setRotate] = useState(0);
 
