@@ -238,6 +238,11 @@
             border: 1px solid $color5;
         }
     }
+    .summary {
+        .delivery {
+            display: flex;
+        }
+    }
     .buttons {
         display: flex;
         button {

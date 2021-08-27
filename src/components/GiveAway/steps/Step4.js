@@ -3,7 +3,7 @@ import Step4Textarea from "./Step4Textarea";
 
 export default function Step4() {
     return (
-        <div class="step4">
+        <div className="step4">
             <div className="col">
                 <h2>Pickup address</h2>
                 <form>

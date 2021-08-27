@@ -2,7 +2,7 @@ import {useContext} from "react";
 import {GiveAwayContext} from "../GiveAway/GiveAwayMain";
 
 export default function NextButton() {
-    const {handleNextStep} = useContext(GiveAwayContext);
+    const {handleNextStep, step} = useContext(GiveAwayContext);
 
     const handleClick = () => {
         if (typeof handleNextStep === "function") {
@@ -11,6 +11,6 @@ export default function NextButton() {
     }
 
     return (
-        <button onClick={handleClick}>Next</button>
+        <button onClick={handleClick}>{step === 5 ? "Confirm" : "Next"}</button>
     )
 }

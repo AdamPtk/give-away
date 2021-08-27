@@ -18,8 +18,8 @@ export default function GiveAwayMain() {
 
     return (
         <section id="give-away-form">
-            <GiveAwayContext.Provider value={{handleNextStep, handlePrevStep}}>
-                <GiveAwayImportant step={step}/>
+            <GiveAwayContext.Provider value={{handleNextStep, handlePrevStep, step}}>
+                {step <= 4 ? <GiveAwayImportant step={step}/> : null}
                 <GiveAwayFormArea step={step}/>
             </GiveAwayContext.Provider>
         </section>
