@@ -243,6 +243,15 @@
             display: flex;
         }
     }
+    .thanks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-top: 20vh;
+        text-align: center;
+    }
     .buttons {
         display: flex;
         button {

@@ -5,6 +5,7 @@ import Step2 from "./steps/Step2";
 import Step3 from "./steps/Step3";
 import Step4 from "./steps/Step4";
 import Summary from "./steps/Summary";
+import Thanks from "./steps/Thanks";
 
 export default function GiveAwayFormArea({step}) {
     const headerSwitch = (step) => {
@@ -19,6 +20,8 @@ export default function GiveAwayFormArea({step}) {
                 return "Type address and time of your package pickup:";
             case 5:
                 return "Summary:";
+            case 6:
+                return null;
             default:
                 return "Select what you want to give away:";
         }
@@ -36,6 +39,8 @@ export default function GiveAwayFormArea({step}) {
                 return <Step4 />
             case 5:
                 return <Summary />
+            case 6:
+                return <Thanks />
             default:
                 return <Step1 />
         }
@@ -46,7 +51,7 @@ export default function GiveAwayFormArea({step}) {
             <div className="container">
                 {step <= 4 ? <p>Step {step}/4</p> : null}
                 <div className="forms">
-                    <h1>{headerSwitch(step)}</h1>
+                    {step === 6 ? null : <h1>{headerSwitch(step)}</h1>}
                     <div>{stepSwitch(step)}</div>
                 </div>
                 <div className="buttons">
