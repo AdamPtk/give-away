@@ -1,8 +1,13 @@
-export default function Step3Checkbox({label}) {
+import {useContext} from "react";
+import {GiveAwayContext} from "../GiveAwayMain";
+
+export default function Step3Checkbox({label, id, handleChange}) {
+    const {formData} = useContext(GiveAwayContext);
+
     return (
-            <label>
-                <input id="step3-helpgroup" type="checkbox" name="step3-helpgroup"/>
-                <span>{label}</span>
-            </label>
+        <label>
+            <input type="checkbox" name="group" id={id} value={id} onChange={handleChange} checked={formData[id]} />
+            <span>{label}</span>
+        </label>
     )
 }

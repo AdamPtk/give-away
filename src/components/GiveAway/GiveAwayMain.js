@@ -26,6 +26,13 @@ export default function GiveAwayMain() {
         }))
     }
 
+    const handleChangeCheck = (key, value) => {
+        setFormData(prev => ({
+            ...prev,
+            [key]: [...prev, value]
+        }))
+    }
+
     const handleNextStep = () => {
         setStep(prev => prev + 1)
     }
@@ -36,7 +43,7 @@ export default function GiveAwayMain() {
 
     return (
         <section id="give-away-form">
-            <GiveAwayContext.Provider value={{handleNextStep, handlePrevStep, step, formData, handleChange, handleChangeSel}}>
+            <GiveAwayContext.Provider value={{handleNextStep, handlePrevStep, step, formData, handleChange, handleChangeSel, handleChangeCheck}}>
                 {step <= 4 ? <GiveAwayImportant step={step}/> : null}
                 <GiveAwayFormArea step={step}/>
             </GiveAwayContext.Provider>

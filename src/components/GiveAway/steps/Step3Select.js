@@ -1,10 +1,14 @@
 import {useState} from "react";
+import {useContext} from "react";
+import {GiveAwayContext} from "../GiveAwayMain";
 import arrow from "../../../assets/Icon-Arrow-Down.svg";
 
 
-export default function Step3Select({select, onSelect}) {
+export default function Step3Select() {
     const [isActive, setIsActive] = useState(false);
     const [rotate, setRotate] = useState(0);
+
+    const {formData, handleChangeSel} = useContext(GiveAwayContext);
 
     const cities = ["Poznań", "Warszawa", "Wrocław", "Kraków", "Katowice"];
 
@@ -17,7 +21,7 @@ export default function Step3Select({select, onSelect}) {
                     rotate === 0 ? setRotate(1) : setRotate(0);
                 }}
             >
-                <span>{select}</span>
+                <span>{formData.location}</span>
                 <img src={arrow} alt="arrow" rotate={rotate}/>
             </div>
             {isActive && (
@@ -27,7 +31,7 @@ export default function Step3Select({select, onSelect}) {
                                     key={i}
                                     className="select-item"
                                     onClick={e => {
-                                        onSelect(city);
+                                        handleChangeSel("location", city);
                                         setIsActive(!isActive);
                                         rotate === 0 ? setRotate(1) : setRotate(0);
                                     }}
