@@ -12,19 +12,33 @@ export default function GiveAwayMain() {
     const [formData, setFormData] = useState(formObj);
 
     const handleChange = e => {
-        const {name, value} = e.target;
+        const {name, value, type} = e.target;
+        if (type === "text" || type === "radio") {
+            setFormData(prev => ({
+                ...prev,
+                [name]: value
+            }))
+        } else if (type === "checkbox") {
+            setFormData(prev => ({
+                ...prev,
+                [name]: prev[name].includes(value) ? prev[name].filter(el => el !== value) : [...prev[name], value]
+            }))
+        }
+    }
+
+    const handleChangeSel = (key, selected) => {
         setFormData(prev => ({
             ...prev,
-            [name]: value
+            [key]: selected
         }))
     }
 
-    const handleChangeSel = (key, value) => {
-        setFormData(prev => ({
-            ...prev,
-            [key]: value
-        }))
-    }
+    // const handleChangeCheck = (key, value) => {
+    //     setFormData(prev => ({
+    //         ...prev,
+    //         [key]: prev[key].includes(value) ? prev[key].filter(el => el !== value) : [...prev[key], value]
+    //     }))
+    // }
 
     const handleNextStep = () => {
         setStep(prev => prev + 1)
