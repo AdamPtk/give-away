@@ -12,7 +12,9 @@ export default function SummaryHead() {
             <h2>You give away:</h2>
             <div className="sum">
                 <img src={tshirt} alt="tshirt" />
-                <span>{formData.bags} {formData.bags > 1 ? "bags" : "bag"}, {formData.category.replaceAll("-", " ")}, recipent</span>
+                <span>
+                    {formData.bags} {formData.bags > 1 ? "bags" : "bag"}, {formData.category.replaceAll("-", " ")}, {formData.group.map(el => el.replaceAll("-", " ")).join(", ")}
+                </span>
             </div>
             <div className="location">
                 <img src={locationImg} alt="location" />
