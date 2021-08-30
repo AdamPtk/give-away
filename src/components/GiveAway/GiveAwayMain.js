@@ -13,17 +13,18 @@ export default function GiveAwayMain() {
 
     const handleChange = e => {
         const {name, value, type} = e.target;
-        if (type === "text" || type === "radio") {
-            setFormData(prev => ({
-                ...prev,
-                [name]: value
-            }))
-        } else if (type === "checkbox") {
+        if (type === "checkbox") {
             setFormData(prev => ({
                 ...prev,
                 [name]: prev[name].includes(value) ? prev[name].filter(el => el !== value) : [...prev[name], value]
             }))
-        }
+        } else {
+            setFormData(prev => ({
+                ...prev,
+                [name]: value
+            }))
+            
+        } 
     }
 
     const handleChangeSel = (key, selected) => {
@@ -32,13 +33,6 @@ export default function GiveAwayMain() {
             [key]: selected
         }))
     }
-
-    // const handleChangeCheck = (key, value) => {
-    //     setFormData(prev => ({
-    //         ...prev,
-    //         [key]: prev[key].includes(value) ? prev[key].filter(el => el !== value) : [...prev[key], value]
-    //     }))
-    // }
 
     const handleNextStep = () => {
         setStep(prev => prev + 1)

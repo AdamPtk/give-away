@@ -7,18 +7,18 @@ export default function Step4() {
             <div className="col">
                 <h2>Pickup address</h2>
                 <form>
-                    <Step4Input label="Street" type="text"/>
-                    <Step4Input label="City" type="text"/>
-                    <Step4Input label="ZIP Code" type="text"/>
-                    <Step4Input label="Phone" type="tel"/>
+                    <Step4Input label="Street" type="text" name="street"/>
+                    <Step4Input label="City" type="text" name="city"/>
+                    <Step4Input label="ZIP Code" type="text" name="zipCode"/>
+                    <Step4Input label="Phone" type="tel" name="phone"/>
                 </form>
             </div>
             <div className="col">
                 <h2>Pickup date</h2>
                 <form>
-                    <Step4Input label="Date" type="date"/>
-                    <Step4Input label="Time" type="time"/>
-                    <Step4Textarea label="Comment" />   
+                    <Step4Input label="Date" type="date" name="date"/>
+                    <Step4Input label="Time" type="time" name="time"/>
+                    <Step4Textarea label="Comment" name="comment"/>   
                 </form>
             </div>
         </div>
