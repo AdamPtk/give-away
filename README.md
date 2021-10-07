@@ -12,6 +12,7 @@ Place where you can give away your unused things to trustworthy charity organiza
 * responsiveness
 * give-away form validation
 * firebase login n timeout
+* forgot password? component
 
 ### Check it out here:
 
